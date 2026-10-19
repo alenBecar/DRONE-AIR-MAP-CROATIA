@@ -130,14 +130,6 @@ The AMC data package (`/AMC/Package/InitialPackage`) contains more than public a
 - **NOAA SWPC**: Kp index
 - **Sentinel-2 cloudless 2024** by EOX IT Services GmbH (CC BY-NC-SA 4.0, contains modified Copernicus Sentinel data 2024): satellite imagery
 
-## claude.ai artifact build
-
-A claude.ai artifact cannot fetch external resources, so everything ships as published files:
-
-- **Page:** `tools/build_page.py artifact <out>`
-- **Basemap:** `artifact/shard.py` splits the basemap into `.wasm` shards
-- **Satellite imagery:** `artifact/sat.py`
-
 ## Usage and license
 
 This is a personal, non-commercial project. Several data sources (open flightmaps, Sentinel-2 cloudless) allow non-commercial use only, so any deployment must stay non-commercial too. All data remains under the licenses of its respective sources listed above.
