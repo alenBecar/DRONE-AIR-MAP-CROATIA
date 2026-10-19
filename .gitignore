@@ -1,0 +1,7 @@
+web/index.html
+web/fonts/
+web/sprites/
+__pycache__/
+*.pyc
+build/
+tools/maplibre-gl.css

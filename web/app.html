@@ -1,0 +1,51 @@
+<title>Letim tu?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>/*MAPLIBRE_CSS*/</style>
+<style>
+/*APP_CSS*/</style>
+
+<div id="app">
+  <div id="map" role="application" aria-label="Karta Hrvatske za dronove">
+    <div class="bar">
+      <div class="brand">
+        <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="var(--accent)"/><g stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"><path d="M9 9l12 12M21 9L9 21"/><circle cx="8" cy="8" r="3"/><circle cx="22" cy="8" r="3"/><circle cx="8" cy="22" r="3"/><circle cx="22" cy="22" r="3"/></g></svg>
+        <div><b>Letim tu?</b><small>Dron karta · Hrvatska</small></div>
+      </div>
+      <div class="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input id="q" type="search" placeholder="Mjesto, vrh ili koordinate (45.81, 15.98)" autocomplete="off" aria-label="Traži mjesto">
+        <div class="results" id="res" hidden></div>
+      </div>
+      <div class="tools">
+        <button class="iconbtn" id="btnSat" aria-pressed="false" title="Satelitska snimka">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="6" height="6" rx="1" transform="rotate(45 12 12)"/><path d="M4.5 8.5l3-3 3 3-3 3zM13.5 17.5l3-3 3 3-3 3zM5 19c0-2 1-3 3-3M3 21c0-4 2-7 6-7"/></svg><span>Satelit</span>
+        </button>
+        <button class="iconbtn" id="btnLayers" aria-pressed="false" aria-controls="layers" title="Slojevi">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg><span>Slojevi</span>
+        </button>
+      </div>
+    </div>
+    <div id="layers" hidden></div>
+    <div class="loading" id="loading">Učitavam podatke…</div>
+    <aside id="panel" aria-live="polite">
+      <button class="grab" id="grab" aria-label="Povećaj ili smanji panel"></button>
+      <div class="pscroll" id="pbody"></div>
+    </aside>
+  </div>
+  <div id="timebar">
+    <button class="now" id="btnNow">Sada</button>
+    <div class="tl">
+      <input type="range" id="trange" min="0" max="71" step="1" value="0" aria-label="Vrijeme leta">
+      <div class="ticks" id="ticks"></div>
+    </div>
+    <div class="when" id="when">–</div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@protomaps/basemaps@5.7.0/dist/basemaps.js"></script>
+<script>
+"use strict";
+/*APP_JS*/</script>
